@@ -28,12 +28,13 @@ module.exports = function(map, options) {
                         replacement = replacement.join('.').replace(/[^a-z0-9_]+/g, '_');
                     }
 
-                    // Wichtig: $ ist ein Sonderzeichen im 2. Argument von String.replace.
-                    // Um ein $-Zeichen auszugeben wird "$$" als Escape benoetigt.
-                    // Allerdings wird das Ergebnis dieses Replace ebenfalls fuer
-                    // ein String.replace benoetigt, daher muessen im Ergebnis zwei
-                    // $-Zeichen vorhanden sein. Um zwei Zeichen zu erhalten wird
-                    // das "$$$$" verwendet.
+                    // Important: $ is a special char inside the 2. argument of 
+                    // String.replace.
+                    // To insert a normal $ sign "$$" needs to be used to escape 
+                    // the second $.
+                    // Additionally, because the result of this replacement will 
+                    // be used again for another replacement it is neccessary to
+                    // escape the $ sign twice.
                     replacement = match[0].replace(match[3], '$$$$CMS_REF(media:"' + replacement + '")$$$$');
 
                     content = content.replace(match[0], replacement);
