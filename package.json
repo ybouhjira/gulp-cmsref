@@ -1,0 +1,40 @@
+{
+  "name": "gulp-cmsref",
+  "version": "0.1.0",
+  "description": "A gulp plugin to replace file name references with FirstSpirit compatible $CNS_REF-tags",
+  "main": "index.js",
+  "dependencies": {
+    "event-stream": "~3.0.18",
+    "istextorbinary": "~1.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kkriehl/gulp-cmsref.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "firstspirit",
+    "cms",
+    "media",
+    "references",
+    "replace"
+  ],
+  "author": {
+    "name": "Kristian Kriehl",
+    "email": "kristian.kriehl@mailbox.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkriehl/gulp-cmsref/issues"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "readmeFilename": "README.md",
+  "dist": {
+    "shasum": "42ea074c3e861ba09b3ff821912ce14e3335091f"
+  }
+}
